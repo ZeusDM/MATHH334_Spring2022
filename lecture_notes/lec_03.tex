@@ -1,0 +1,53 @@
+\section{Orbits}
+\lecture{3}{2022-01-24}{Orbits}
+
+\begin{defn}{Orbits}{orbits}
+  Suppose \(G\) acts on \(S\). Fix \(s \in S\). The \emph{orbit of \(s\)} is
+  \[
+    O_s = \{g * s : g \in G\}.
+  \] 
+\end{defn}
+
+\begin{exmp}{}{}
+  Let \(S = \mathbb{R}^2\) and \(G\) be the group of rotations of \(\mathbb{R}\) around the origin.
+  We denote by \(\rho_\theta \in G\) the rotation around the origin by \(\theta\).
+  Define \(\rho_\theta * \vec x = \rho_\theta(\vec x)\).
+
+  If we fix \(\vec x \in \mathbb{R}^2\), the orbit \(O_{\vec x}\) is the circle centered at the origin with radius  \(\left|\vec x\right|\).
+\end{exmp}
+
+\begin{exmp}{}{}
+	Let \(G\) be a group. Define the group action \emph{left multiplication} of \(G\) on itself defined by \(g * s = gs\).
+
+    If we fix \(x \in G\), note that \((yx^{-1})*x=yx^{-1}x=y\); therefore the orbit \(O_x\) is \(G\).
+\end{exmp}
+
+\begin{defn}{Stabilizer}{}
+  Suppose \(G\) acts on \(S\). Fix \(s \in S\). The \emph{stabilizer of \(s\)} is
+  \[
+    G_s = \{g \in G : g * s = s\}.
+  \] 
+\end{defn}
+
+\begin{exmp}{}{}
+  Let \(S = \mathbb{R}^2\) and \(G\) be the group of rotations of \(\mathbb{R}\) around the origin.
+  We denote by \(\rho_\theta \in G\) the rotation around the origin by \(\theta\).
+  Define \(\rho_\theta * \vec x = \rho_\theta(\vec x)\).
+
+  If we fix \(\vec x \neq \vec 0 \in \mathbb{R}^2\), the stabilizer \(S_{\vec x}\) is \(\{\rho_0\}\).
+  The stabilizer \(S_{\vec 0}\) is \(G\).
+\end{exmp}
+
+\begin{exmp}{}{}
+	Let \(G\) be a group. Define the group action \emph{left multiplication} of \(G\) on itself defined by \(g * s = gs\).
+
+    If we fix \(x \in G\), note that \((gx=x \iff g=e\); therefore the orbit \(O_x\) is \(\{e\}\).
+\end{exmp}
+
+\begin{prop}{}{}
+  Suppose \(G\) acts on \(S\). Fix \(s \in S\). The orbit \(O_s\) is a group.
+\end{prop}
+
+\begin{dem}{Sketch}{}
+  Just check the axioms.
+\end{dem}

@@ -1,0 +1,36 @@
+\section*{Intro Text about Algebra and Representation Theory, by Liz}
+
+\lecture{1}{2022-01-19}{Group Actions}
+
+We encounter symmetry in nearly every aspect of our daily lives: looking at our faces in the mirror, watching snowflakes fall from the sky, and driving across bridges. Symmetric organisms persist through evolution in nature, symmetric protagonists are perceived as especially beautiful in art, and symmetric components are critical to engineering structures that can withstand powerful forces. The set of symmetries of a particular physical object enjoys a rich algebraic structure, since symmetries are operations that can be composed together. 
+
+This group of all symmetries can then be conveniently studied by encoding each symmetry as a rectangular array of numbers called a matrix. This process of passing from a symmetric object in the natural world to a related collection of matrices is the hallmark of the mathematical field of representation theory. Representation theory thus reduces the wild and complex study of symmetry in nature to questions in the well understood area of mathematics called linear algebra.
+
+As such, the proposed projects have broad potential to substantially impact our understanding of many symmetric structures occurring throughout the mathematical and natural sciences. 
+
+\chapter{Group Actions}
+
+\begin{exmp}{}{}
+  Let's look into \(S_6\), the group of permutations on \([6] = \{1, 2, 3, 4, 5, 6\}\).
+  Consider \[ \pi = (2\,5\,6)(1\,3) = 
+    \begin{bmatrix}
+      1 & 2 & 3 & 4 & 5 & 6 \\
+      3 & 5 & 1 & 4 & 6 & 2 
+    \end{bmatrix} \in S_6.\]
+
+    The idea is that a group action is a way to mix up things in a set. In this example, \(\pi\) mixes up \(\{1, 2, 3, 4, 5, 6\}\) in the way the second row says.
+\end{exmp}
+
+Groups \emph{act} on sets. Group actions capture the symmetries of the set. Let's formalize that concept.
+
+\begin{defn}{Group Actions}{groupactions}
+  An \emph{action} of a group \(G\) on a set \(S\) is a function \(* \colon G \times S \to S\), denoted by \((g, s) \mapsto g * s\), such that
+  \begin{enumerate}
+    \item \(e * s = s\); and
+    \item \(g * (h * s) = (gh) * s\).
+  \end{enumerate}
+\end{defn}
+
+\begin{exmp}{}{}
+  The symmetric group \(S_n\) acts on \([n]\) by the action \(\pi * i := \pi(i)\).
+\end{exmp}

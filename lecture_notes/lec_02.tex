@@ -1,0 +1,30 @@
+\lecture{2}{2022-01-21}{}
+
+\begin{exmp}{}{}
+Let \(G\) be the set of translations \(t_{\vec v}\) in the plane by any vector \(\vec v \in \mathbb{R}^2\).
+Endow \(G\) with the operation of composition.
+
+Consider the rule \(t_{\vec v} * \vec x = \vec v + \vec x\). Note that 
+\begin{enumerate}
+  \item \(t_{\vec 0}\) is the identity of \(G\) and, for all \(\vec x \in \mathbb{R}^2\) \[
+	  t_{\vec 0} * \vec x = \vec 0 + \vec x = \vec x,
+	\]
+  \item for all \(t_{\vec v}, t_{\vec u} \in G\) and \(\vec x \in \mathbb{R}^2\),
+	\begin{align*}
+		t_{\vec v} * (t_{\vec u} * \vec x)
+			&= t_{\vec v} * (\vec u + \vec x) \\
+			&= \vec v + (\vec u + \vec x) \\
+			&= (\vec v + \vec u) + \vec x \\
+			&= t_{\vec v + \vec u} * \vec x \\
+			&= (t_{\vec v} \circ t_{\vec u}) * \vec x.
+	\end{align*}
+\end{enumerate} 
+\end{exmp}
+
+\begin{exmp}{Example of Non-Action}{}
+	If \(G\) is a non-commutative group, then \emph{right multiplication} of \(G\) on itself defined by \(g * s = sg\) is not a group action.
+\end{exmp}
+
+\begin{exmp}{}{}
+	If \(G\) is a group, then \emph{left multiplication} of \(G\) on itself defined by \(g * s = gs\) is a group action.
+\end{exmp}
