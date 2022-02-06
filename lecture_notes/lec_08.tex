@@ -1,0 +1,66 @@
+\section{Burnside's Lemma}
+\lecture{8}{2022-02-04}{Burnside's Lemma}
+
+\begin{defn}{Fixed set}{fixedset}
+  Suppose \(G\) acts on \(S\). Let \(g \in G\). The fixed set of \(g\) is \[
+    S^g = \{s \in S : g*s = s\}.
+  \] 
+\end{defn}
+
+\begin{thm}{Burnside's Lemma}{burnside}
+  Suppose a finite group \(G\) acts on \(S\). Then, \[
+    \#(\text{orbits}) = \frac{1}{|G|} \sum_{g \in G} |S^g|,
+  \] 
+  i.e., the number of orbits is the average size of the fixed sets.
+\end{thm}
+
+\begin{dem}{}{}
+  Note that
+  \begin{align*}
+	\#(\text{orbits}) &= \sum_{s \in S} \frac{1}{\left|\mathcal{O}_s\right|} \\
+					  &= \sum_{s \in S} \frac{\left|G_s\right|}{\left|G\right|} \\
+					  &= \frac{1}{\left|G\right|} \sum_{s \in S} \left|G_s\right| \\
+                      &= \frac{1}{\left|G\right|} \sum_{g \in G} \left|S^g\right| & \text{(by double counting)}
+  \end{align*}
+\end{dem}
+
+\subsection*{Application}
+
+\begin{que}{}{}
+A board game piece is a cube, in which each face is colored in one of three colors.
+Thus, each piece is associated with a \(3\)-coloration of the \(6\) faces of the cube. 
+
+We say that two board game pieces are indistinguishable when one can be rotated into the other. What is the maximum number of distinguishable game pieces?
+\end{que}
+
+Let \(G\) be the group of rotations of the cube.
+Let \(S\) be the set of \(3\)-colorations of the faces of the cube.
+Let \(G\) act on \(S\) naturally.
+
+The answer to the question is the number of orbits of this action; since distinguishable colorations must be in distinct orbits.
+
+There are some types of rotations:
+\begin{enumerate}[label = \textbullet]
+  \item \(1\) identity.
+  \item \(3\) rotations by \(90^\circ\) through an axis through midpoints of opposite faces.
+  \item \(3\) rotations by \(180^\circ\) through an axis through midpoints of opposite faces.
+  \item \(3\) rotations by \(270^\circ\) through an axis through midpoints of opposite faces.
+  \item \(6\) rotations by \(180^\circ\) through an axis through midpoints of opposite edges.
+  \item \(4\) rotations by \(120^\circ\) through an axis through opposite vertices.
+  \item \(4\) rotations by \(240^\circ\) through an axis through opposite vertices.
+\end{enumerate}
+
+Respectively, their fixed sets have \(3^6\), \(3^3\), \(3^4\), \(3^3\), \(3^3\), \(3^2\), \(3^2\), elements.
+Finally, by \nameref{thm:burnside}, we conclude that the number of orbits is \[
+  \#(\text{orbits}) = \frac{1}{24} \left(
+    1 \cdot 3^6 +
+    3 \cdot 3^3 +
+    3 \cdot 3^4 +
+    3 \cdot 3^3 +
+    6 \cdot 3^3 +
+    4 \cdot 3^2 +
+    4 \cdot 3^2\right)
+    = \frac{1368}{24} = 57.
+\] 
+
+

@@ -1,0 +1,28 @@
+\lecture{7}{2022-02-02}{Rotation symmetries of a cube}
+
+\subsection*{Application}
+
+\begin{que}{}{}
+  What are all rotational symmetries of a cube?
+\end{que}
+
+Let \(G\) be the group of rotations of the cube.
+Let \(S\) be the set of (the six) faces of the cube.
+Let \(G\) act on \(S\) naturally.
+Note that this action is transitive, i.e., you can send any face to any other face via rotations.
+Also, if we fix \(s \in S\) to be a face, then there are only \(4\) rotations of the cube that fix \(s\).
+
+Therefore, using the \nameref{thm:orbit-stabilizer}, we conclude that \[
+  |G| = |\mathcal{O}_s| |G_s| = 6 \cdot 4 = 24.
+\] 
+
+Now, if we want to describe all rotational symmetries of a cube and be sure there is no sneaky rotation that we didn't account for, it suffices to describe \(24\) distinct rotations. Here they are:
+\begin{enumerate}[label = \textbullet]
+  \item \(1\) identity.
+  \item \(3\) rotations by \(90^\circ\) through an axis through midpoints of opposite faces.
+  \item \(3\) rotations by \(180^\circ\) through an axis through midpoints of opposite faces.
+  \item \(3\) rotations by \(270^\circ\) through an axis through midpoints of opposite faces.
+  \item \(6\) rotations by \(180^\circ\) through an axis through midpoints of opposite edges.
+  \item \(4\) rotations by \(120^\circ\) through an axis through opposite vertices.
+  \item \(4\) rotations by \(240^\circ\) through an axis through opposite vertices.
+\end{enumerate}

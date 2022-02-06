@@ -17,8 +17,8 @@
 \usepackage{enumitem}
 \setlist{noitemsep, label = \textbf{\roman*.}}
 \usepackage{todonotes}
-%\newcommand\showkeyslabelformat[1]{\hspace*{-1in}\raisebox{1.3em}{\normalfont\footnotesize\ttfamily#1}}
-%\usepackage[color]{showkeys}
+\newcommand\showkeyslabelformat[1]{\hspace*{-1in}\raisebox{1.3em}{\normalfont\footnotesize\ttfamily#1}}
+\usepackage[color]{showkeys}
 
 \usepackage{tcolorbox}
 \usepackage{amsthm}
@@ -143,7 +143,7 @@
 \newcommand{\lecture}[3]{
 	%\newpage
 	%\section{#3 (#2)}
-	\todo[bordercolor = gray!30!white, backgroundcolor = gray!30!white, noline]{\scalebox{.65}{Lecture #1}}
+	%\todo[bordercolor = gray!30!white, backgroundcolor = gray!30!white, noline]{\scalebox{.65}{Lecture #1}}
 }
 
 \usepackage{import}

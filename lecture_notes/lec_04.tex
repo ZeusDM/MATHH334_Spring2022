@@ -1,0 +1,72 @@
+\section{Global Properties}
+
+\lecture{4}{2022-01-26}{More Orbits and Stabilizers}
+
+\begin{defn}{Transitive Action}{transitiveaction}
+  Let \(G\) act on \(S\).
+  The action is \emph{transitive} if, for all \(s, s' \in S\), there exists \(g \in G\) such that \(g * s = s'\).
+
+  Equivalenty, the action is transitive if, for all \(s \in S\), the orbit of \(s\) is \(S\).
+\end{defn}
+
+\begin{defn}{Faithful Action}{faithfulaction}
+  Let \(G\) act on \(S\).
+  The action is \emph{faithful} if the only group element that fixes every set element is \(e\), i.e., whenever \(g * s = s\) for all \(s\) implies \(g = e\).
+
+  Equivalently, the action is faithful if \(\bigcap_{s\in S} G_s = \{e\}\).
+\end{defn}
+
+\begin{exmp}{}{}
+  Let \(G\) be the group of rotations of \(\mathbb{R}\) around the origin. Let \(G\) act on \(\mathbb{R}\) naturally.
+  This action is not transitive, but it it faithful.
+\end{exmp}
+
+\begin{exmp}{}{}
+  Let \(G\) be a group. Let \(G\) act on itself by multiplication.
+  This action is transitive and faithful.
+\end{exmp}
+
+\section{Propositions on Orbits and Stabilizers}
+
+\begin{prop}{}{orbitspartition}
+  Suppose \(G\) acts on \(S\). The set of orbits \[
+    \{\mathcal{O}_s : s \in S\}
+  \] is a partition of \(S\).
+
+  Equivalently, if \(s, s' \in S\), then either \(\mathcal{O}_s = \mathcal{O}_{s'}\) or  \(\mathcal{O}_s \cap \mathcal{O}_{s'} = \varnothing\).
+\end{prop}
+
+\begin{dem}{}{}
+  Define a relation \(\sim\) by \(s_1 \sim s_2\) if, and only if, there exists \(g \in G\) such that  \(g*s_1 = s_2\). This is an equivalence relation, since 
+  \begin{enumerate}
+    \item \(s \sim s\) follows from \(e*s = s\);
+    \item \(s_1 \sim s_2 \iff s_2 \sim s_1\) follows from \(g*s_1 = s_2 \iff g^{-1}*s_2 = s_1\); and
+    \item \(s_1 \sim s_2\) and \(s_2 \sim s_3 \implies s_1 \sim s_3\) follows from \(g*s_1 = s_2\) and  \(h*s_2 = s_3 \implies (hg)*s_1 = s_3\).
+  \end{enumerate}
+
+  Therefore, since \(\mathcal{O}_s\) is the equivalence class of \(s\) with respect to \(\sim\), it follows that the set of orbits partitions \(S\).
+\end{dem}
+
+\begin{prop}{}{stabilizersaresubgroups}
+  Suppose \(G\) acts on \(S\). Fix \(s \in S\). The stabilizer \(G_s\) is a subgroup of \(G\).
+\end{prop}
+
+\begin{dem}{}{}
+  Note that
+  \begin{enumerate}
+    \item \(e * s = s\), therefore \(e \in G_s\).
+    \item if \(g, h \in G_s\), then \((gh)*s = g*(h*s)=g*(s)=s\), therefore \(gh \in G_s\).
+    \item if \(g \in G_s\), then \(g^{-1}*s = g^{-1}*(g*s) = (g^{-1}g)*s = e*s = s\), therefore \(g^{-1} \in G_s\).
+  \end{enumerate}
+
+  Therefore, \(G_s\) is a subgroup of \(G\).
+\end{dem}
+
+\begin{thm}{Orbit--Stabilizer Theorem}{orbit-stabilizer}
+  Let \(G\) act on \(S\). Let \(s \in S\). Then \[
+    \left| \mathcal{O}_s \right| = \left| G/G_s \right| = [G : G_s].
+  \] 
+  If \(G\) is finite, then, \[
+    \left| \mathcal{O}_s \right| = \frac{|G|}{|G_s|}.
+  \] 
+\end{thm}

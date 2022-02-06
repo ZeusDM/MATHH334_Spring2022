@@ -1,0 +1,19 @@
+\lecture{6}{2022-01-31}{Proof of Orbit-Stabilizer Thm}
+
+\begin{dem}{}{}
+  Note that, for all \(x, y \in G\), 
+  \begin{align*}
+    xG_s = yG_s &\iff G_s = x^{-1}yG_s \\
+                &\iff x^{-1}y \in G_s \\
+                &\iff x^{-1}ys = s \\
+                &\iff x*s = y*s.
+  \end{align*}
+
+  Consider the map \(\varphi \colon G/G_s \to O_s\) by \(\varphi(xG_s) = x*s\).
+
+  By our first observation, \(\varphi\) is well-defined, as well as injective.
+
+  Note that, if \(s' \in O_s\), then there exists \(g \in G\) such that \(s' = g * s\). Thus, \(\phi(gG_s) = g*s = s'\). Therefore, \(\varphi\) is onto.
+
+  Finally, \(\varphi\) is a bijection. Therefore, \(|G/G_s| = |O_s|\), as desired.
+\end{dem}
