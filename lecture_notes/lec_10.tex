@@ -1,0 +1,50 @@
+\lecture{10}{2022-02-09}{}
+
+\begin{prop}{}{pigbijection}
+  Let \(G\) act on \(S\). Fix \(\pi_g \colon S \to S\) be defined by \(s \mapsto g * s\). Then, \(\pi_g\) is a bijection.
+\end{prop}
+
+\begin{dem}{}{}
+  I claim that \(\pi_g\) is injective. Indeed, if \(\pi_g(s) = \pi_g(r)\), then \(g * s = g * r\), then \(s = g^{-1} * (g * s) = g^{-1} * (g * r) = r\).
+
+  I claim that \(\pi_g\) is surjective. Indeed, for all \(s \in S\), \(\pi_g(g^{-1} * s) = s\).
+\end{dem}
+
+\begin{defn}{Permutations of \(S\)}{}
+  Let \(\Perm(S)\) be the group of bijections from \(S\) to \(S\) endowed with composition.
+\end{defn}
+
+\begin{prop}{}{}
+  \(\Perm(S)\) is a group.
+\end{prop}
+
+\begin{thm}{}{GtoPermS}
+  Let \(G\) act on \(S\). Define a map \(\phi \colon G \to \Perm(S)\) defined which sends \(g\) to \(\pi_g\), as defined in Proposition \ref{prop:pigbijection}.
+
+  Then, \(\phi\) is a group homomorphism.
+\end{thm}
+
+\begin{dem}{}{}
+  Let \(g, h \in G\) be arbitrary.
+
+  Note that, for all \(s \in S\), 
+  \begin{align*}
+    (\pi_h \circ \pi_g)(s) &= \pi_h(\pi_g(s)) \\
+                           &= \pi_h(g * s) \\
+                           &= h * (g * s) \\
+                           &= (hg) * s \\
+                           &= \pi_{hg}(s).
+  \end{align*}
+
+  Therefore, it follows that \(\phi(h) \circ \phi(g) = \phi(hg)\), for all \(g, h \in G\); thus, \(\phi\) is a group homomorphism.
+\end{dem}
+
+\begin{thm}{}{GfaithfultoPermSinjective}
+  Suppose \(G\) acts faithfully on \(S\). Then, \(\phi\), as defined in Theorem \ref{thm:GtoPermS}, is injective.
+\end{thm}
+
+\begin{dem}{}{}
+  If \(\phi(g) = \phi(h)\), then \(\phi(gh^{-1}) = \phi(h)\), then \((gh^{-1})*s = s\) for all \(s\); since the action is faithful, then  \(gh^{-1} = e\), then \(g = h\).
+
+  Therefore, \(\phi\) is injective.
+\end{dem}
