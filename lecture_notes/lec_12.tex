@@ -1,0 +1,24 @@
+\lecture{12}{2022-02-14}{}
+
+\section{Representation}
+
+\begin{defn}{Representation}{}
+  A \emph{representation} of a group \(G\) is a homomorphism \(\rho\colon G \to GL(V)\) for some (finite-dimensional) vector space \(V\). The \emph{degree/dimension} of \(\rho\) is the dimension of \(V\).
+\end{defn}
+
+\begin{prop}{}{}
+  Define \(\psi\colon S_n \to GL_n(\mathbb{R})\) by mapping \(\pi\) to a matrix \(M = [a_{ij}]_{n \times n}\) with \[
+    a_{ij} =
+	\begin{cases}
+	  1 & \text{if }j = \pi(i)\\
+	  0 & \text{otherwise.}
+	\end{cases}
+  \] 
+
+  Therefore, the map \[
+    G \to \Perm(S) \to S_n \to GL_n(\mathbb{R}),
+  \] that sends \[
+    g \mapsto \pi_g \to \pi \mapsto M,
+  \] 
+  is a representation.
+\end{prop}
