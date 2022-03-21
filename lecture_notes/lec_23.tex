@@ -1,0 +1,40 @@
+\lecture{23}{2022-03-21}{}
+
+\begin{defn}{Unitary Representation}{unitaryrepresentation}
+	A representation \(\rho \colon G \to GL_n(\mathbb{C})\) is \emph{unitary} if \[
+		\langle \rho_g \mathbf{v}, \rho_g \mathbf{w} \rangle = \langle \mathbf{v}, \mathbf{w} \rangle
+	\] for all \(g \in G\), all \(\mathbf{v}, \mathbf{w} \in \mathbb{C}^n\).
+\end{defn}
+
+\begin{prop}{Proposition 3.2.3 in Steinberg}{}
+	Let \(\rho\colon G \to GL_n(\mathbb{C})\) be a unitary representation.
+	Then, \(\rho\) is irreducible or \(\rho\) is decomposable.
+\end{prop}
+
+\begin{dem}{}{}
+	Suppose \(\rho\) is reducible.
+	There exists a \(G\)-invariant subspace \(V \subset \mathbb{C}^n\).
+	%I claim that \(V^\perp = \{\mathbf{v} \in \mathbb{C}^n : \langle \mathbf{v}, \mathbf{w} \rangle \text{ for all } \mathbf{w} \in V\}\) also is a \(G\)-invariant subspace.
+
+	Let \(k = \dim V\), and let \(\mathcal{B} = \{\mathbf{b}_1, \mathbf{b}_2, \dots, \mathbf{b}_k\}\) be a basis of \(V\).
+	We can rewrite
+	\begin{equation} \label{eq:vperpbasis}
+		V^\perp = \{\mathbf{v} \in \mathbb{C}^n : \langle \mathbf{v}, \mathbf{b}_i \rangle \text{ for all } \mathbf{i} \in \{1, 2, \dots, k\}\}.
+	\end{equation}
+
+	Since \(\rho_g\) is invertible, \(\mathcal{B}' = \{\rho_g\mathbf{b}_1, \rho_g\mathbf{b}_2, \dots, \rho_g\mathbf{b}_k\}\) is linearly independent.
+	Since \(V\) is \(G\)-invariant, \(\rho_g\mathbf{b}_1,\allowbreak \rho_g\mathbf{b}_2,\allowbreak \dots,\allowbreak \rho_g\mathbf{b}_k \in V\); since \(k = \dim V\), it follows that \(\mathcal{B}'\) is a basis of \(V\).
+	Therefore, we can also rewrite
+	\begin{equation} \label{eq:vperpnewbasis}
+		V^\perp = \{\mathbf{v} \in \mathbb{C}^n : \langle \mathbf{v}, \rho_g\mathbf{b}_i \rangle \text{ for all } i \in \{1, 2, \dots, k\}\}.
+	\end{equation}
+
+	Let \(\mathbf{v} \in V^\perp\). Then, for all \(i\),
+	\begin{align*}
+		\langle \rho_g \mathbf{v}, \rho_g \mathbf{b}_i \rangle &= \langle \mathbf{v}, \mathbf{b}_i \rangle & (\text{since \(\rho\) is unitary})\\
+															   &= 0; & (\text{since \(v \in V^\perp\), as in equation \ref{eq:vperpbasis}})
+	\end{align*}
+	therefore, \(\rho_g \mathbf{v} \in V^\perp\), as in equation \ref{eq:vperpnewbasis}. Therefore, \(V\perp\) is a \(G\)-invariant subspace.
+
+	We can write \(\mathbb{C}^n = V \oplus V^\perp\). \textcolor{red}{To be finished.}
+\end{dem}

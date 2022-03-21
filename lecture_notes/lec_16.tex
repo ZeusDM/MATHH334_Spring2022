@@ -1,0 +1,28 @@
+\lecture{16}{2022-02-23}{}
+
+\begin{defn}{Inner Product}{innerproductcharacter}
+	Given two characters \(\chi, \chi' \colon G \to \mathbb{C}\), their inner product is \[
+		\langle \chi, \chi' \rangle = \frac{1}{|G|} \sum_{g \in G} \overline{\chi(g)}\chi'(g).
+	\] 
+\end{defn}
+
+\begin{thm}{Characters \& Irreducibility}{charactersirreducibility}
+	Let \(\rho_1, \rho_2, \dots, \rho_r\) be the distinct irreducible complex representations of a finite group \(G\), having characters \(\chi_i\), where \(r\) is the number of congugacy classes of \(G\). Then
+	\begin{enumerate}
+		\item The irreducible characters are orthonormal, which means \[
+				\langle \chi_i, \chi_j \rangle =
+				\begin{cases}
+					1 & i = j \\
+					0 & i \neq j.
+				\end{cases}
+			\] 
+		\item If \(d_i = \dim \rho_i\), then \(d_i\) divides \(|G|\) and \(|G| = d_1^2 + \cdots + d_r^2\).
+		\item Let \(\rho\) be any representation of \(G\), with character \(\chi\). Then, \[
+				\chi = \langle \chi, \chi_1 \rangle \chi_1 + \cdots + \langle \chi, \chi_r \rangle \chi_r
+			\] and \[
+				\rho = \langle \chi, \chi_1 \rangle \rho_1 + \cdots + \langle \chi, \chi_r \rangle \rho_r.
+			\] 
+		\item Let \(n_i = \langle \chi, \chi_i \rangle\). Then, \(\langle \chi, \chi \rangle = n_1^2 + \cdots + n_r^2\).
+		\item \(\langle \chi, \chi \rangle = 1\) if, and only if, \(\chi\) is the character of an irreducible representation.
+	\end{enumerate}
+\end{thm}
