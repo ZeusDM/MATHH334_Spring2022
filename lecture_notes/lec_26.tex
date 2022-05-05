@@ -1,0 +1,46 @@
+\lecture{26}{2022-04-04}{}
+
+\section{Another Big Goal}
+
+\begin{thm}{}{}
+	If \(\rho\), \(\rho'\) are irreducible representations of \(G\), then \[
+		\langle \chi, \chi' \rangle = 
+		\begin{cases}
+			0 & \rho \ncong \rho' \\
+			1 & \rho \cong \rho'.
+		\end{cases}
+	\] 
+\end{thm}
+
+\section{Schur's Lemma}
+
+\begin{defn}{Intertwiner}{intertwiner}
+	Given \(\rho \colon G \to GL_n(\mathbb{C})\) and \(\rho' \colon G \to GL_m(\mathbb{C})\), then a linear transformation \(M \colon \mathbb{C}^n \to \mathbb{C}^m\) is an \emph{intertwiner} from \(\rho\) to \(\rho'\) if \[
+		M\rho_g = \rho'_gM
+	\] for all \(g \in G\).
+\end{defn}
+
+\begin{thm}{Schur's Lemma}{schurlemma}
+	Given irreducible representations \(\rho \colon G \to GL_n(\mathbb{C})\) and \(\rho' \colon G \to GL_m(\mathbb{C})\), and assume \(M\) intertwines \(\rho\) to \(\rho'\). Then
+	\begin{enumerate}
+		\item if \(\rho \ncong \rho'\), then \(M = 0\).
+		\item if \(\rho = \rho'\), then \(M = \lambda I\) for some \(\lambda \in \mathbb{C}\).
+	\end{enumerate}
+\end{thm}
+
+\begin{dem}{}{}
+	I claim \(\ker M\) is an \(G\)-invariant subspace of \(\mathbb{C}^n\). \textcolor{red}{Prove it.}
+
+	I claim \(\img M\) is an \(G\)-invariant subspace of \(\mathbb{C}^m\). \textcolor{red}{Prove it.}
+
+	I claim \(M = 0\) or \(M\) is invertible.
+
+	If \(\rho \ncong \rho'\), then \(M\) cannot be invertible; therefore \(M = 0\).
+
+	Suppose \(\rho = \rho'\).
+	Let \(\lambda\) be an eigenvalue of \(M\).
+	Then \(\det(\lambda I - M) = 0\).
+	Then \(\lambda I - M\) is not invertible.
+	I claim \(\lambda I - M\) is an intertwiner. \textcolor{red}{Prove it.}
+	Therefore, it must be the case that \(\lambda I - M = 0\), as desired.
+\end{dem}
