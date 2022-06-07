@@ -7,19 +7,35 @@
 If a representation is indexed, e.g. \(\rho_T\), then we usually denote its character by the same index, e.g. \(\chi_T = \chi_{\rho_T}\).
 
 \begin{exmp}{Trivial Representation}{}
-  
+	Let \(G\) be any group. The map \(\rho_T \colon G \to GL_1(\mathbb{C}) = \mathbb{C}^\times\) defined by \[
+		\rho_T(g) = 1
+	\] for all \(g \in G\), is the \emph{trivial representation} of \(G\).
 \end{exmp}
 
 \begin{exmp}{Permutation Representation}{}
-  
+	The map \(\rho_P \colon S_n \to GL_n(\mathbb{C})\) defined by \[
+		\rho_T(\pi) = 
+		\begin{bmatrix}
+			\mathbf{e}_{\pi(1)} &
+			\mathbf{e}_{\pi(2)} &
+			\cdots &
+			\mathbf{e}_{\pi(n)} 
+		\end{bmatrix}
+	\] for all \(\pi \in S_n\), is the permutation representation.
 \end{exmp}
 
 \begin{exmp}{(Left) Regular Representation}{}
-  
+	Consider the action of \(G\) on itself defined by \(g * h = gh\). This yields a representation along the lines of Proposition \ref{prop:action-representation}, with \(S = G\).
 \end{exmp}
 
 \begin{exmp}{Sign Representation of \(S_n\)}{}
-  
+	The map \(\rho_S \colon S_n \to GL_1(\mathbb{C}) = \mathbb{C}^\times\) defined by \[
+		\rho_S(\pi) = 
+		\begin{cases}
+			1 & \text{if \(\pi\) is an even permutation,} \\
+			-1 & \text{otherwise,}
+		\end{cases}
+	\] for all \(\pi \in S_n\), is the \emph{sign representation} of \(S_n\).
 \end{exmp}
 
 \begin{exmp}{Liz's Standard Representation}{}

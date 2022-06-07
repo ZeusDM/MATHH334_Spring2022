@@ -6,7 +6,10 @@
   A \emph{representation} of a group \(G\) is a homomorphism \(\rho\colon G \to GL(V)\) for some (finite-dimensional) vector space \(V\). The \emph{degree/dimension} of \(\rho\) is the dimension of \(V\).
 \end{defn}
 
-\begin{prop}{}{}
+From now on, if \(S\) is a set with \(n\) elements, we will identify each element of \(S\) with an element of \(\{1, 2, \dots, n\}\), and therefore we will identify \(\Perm(S)\) with \(S_n\).
+Whenever useful, we may choose the ordering of \(S\).
+
+\begin{prop}{}{action-representation}
   Define \(\psi\colon S_n \to GL_n(\mathbb{R})\) by mapping \(\pi\) to a matrix \(M = [a_{ij}]_{n \times n}\) with \[
     a_{ij} =
 	\begin{cases}
